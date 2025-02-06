@@ -135,6 +135,17 @@ gsap.from(cta, {
   ease: Expo.easeInOut,
 });
 
+gsap.from(".scroll", {
+  opacity: 0,
+  delay: 8.5,
+  duration: 1,
+});
+
+gsap.to(".scroll ion-icon", {
+  rotate: 45,
+  delay: 9.5,
+});
+
 gsap.from(".loading-line1", {
   width: "0%",
   duration: 2.15,
@@ -222,6 +233,26 @@ gsap.to(heroImg, {
 });
 
 //scroll triggers
+
+gsap.to(".scroll-text", {
+  y: -25,
+  scrollTrigger: {
+    trigger: ".section1",
+    start: "bottom 80%",
+    end: "bottom 50%",
+    scrub: true,
+  },
+});
+
+gsap.to(".scroll ion-icon", {
+  y: -25,
+  scrollTrigger: {
+    trigger: ".section1",
+    start: "bottom 80%",
+    end: "bottom 50%",
+    scrub: true,
+  },
+});
 
 gsap.to("nav .nav-links", {
   x: -90,
@@ -324,7 +355,7 @@ gsap.from(".section2 .pulse", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".section2",
-    start: "top 20%",
+    start: "top 15%",
     end: "top 10%",
     scrub: 1,
   },
@@ -388,6 +419,86 @@ gsap.to(".section3 .project-container4", {
     trigger: ".section3 .project-container4",
     start: "top 18%",
     end: "bottom 18%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .counter1 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container1",
+    start: "top 55%",
+    end: "top 35%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .title1 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container1",
+    start: "top 55%",
+    end: "top 35%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .counter2 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container2",
+    start: "top 55%",
+    end: "top 35%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .title2 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container2",
+    start: "top 55%",
+    end: "top 35%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .counter3 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container3",
+    start: "top 55%",
+    end: "top 35%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .title3 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container3",
+    start: "top 55%",
+    end: "top 35%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .counter4 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container4",
+    start: "top 55%",
+    end: "top 35%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section3 .title4 p", {
+  yPercent: 100,
+  scrollTrigger: {
+    trigger: ".section3 .project-container4",
+    start: "top 55%",
+    end: "top 35%",
     scrub: 1,
   },
 });
@@ -719,8 +830,8 @@ document.querySelectorAll(".skill").forEach((skill) => {
 
     gsap.to(clone, {
       yPercent: 0,
-      duration: 0.5,
-      ease: "power4.out",
+      duration: 0.35,
+      ease: "power1.out",
     });
   });
 
@@ -730,8 +841,8 @@ document.querySelectorAll(".skill").forEach((skill) => {
 
     gsap.to(clone, {
       yPercent: 100,
-      duration: 0.5,
-      ease: "power4.out",
+      duration: 0.35,
+      ease: "power1.out",
       onComplete: () => {
         if (clone && clone.parentNode) {
           clone.parentNode.removeChild(clone);
