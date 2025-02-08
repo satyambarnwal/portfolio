@@ -287,11 +287,11 @@ gsap.to(".title p span", {
 });
 
 gsap.to("#hero-subtitle p span", {
-  yPercent: -120,
+  yPercent: -100,
   scrollTrigger: {
-    trigger: ".title p",
-    start: "top 40%",
-    end: "bottom 30%",
+    trigger: "#hero-subtitle",
+    start: "top 12.5%",
+    end: "bottom 0%",
     scrub: 0.5,
   },
 });
@@ -348,16 +348,6 @@ gsap.from(".section2 .about-description p", {
     start: "top 30%",
     end: "top 15%",
     scrub: 1.5,
-  },
-});
-
-gsap.from(".section2 .pulse", {
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".section2",
-    start: "top 15%",
-    end: "top 10%",
-    scrub: 1,
   },
 });
 
@@ -428,7 +418,7 @@ gsap.from(".section3 .counter1 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container1",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
@@ -438,7 +428,7 @@ gsap.from(".section3 .title1 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container1",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
@@ -448,7 +438,7 @@ gsap.from(".section3 .counter2 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container2",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
@@ -458,7 +448,7 @@ gsap.from(".section3 .title2 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container2",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
@@ -468,7 +458,7 @@ gsap.from(".section3 .counter3 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container3",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
@@ -478,7 +468,7 @@ gsap.from(".section3 .title3 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container3",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
@@ -488,7 +478,7 @@ gsap.from(".section3 .counter4 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container4",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
@@ -498,7 +488,7 @@ gsap.from(".section3 .title4 p", {
   scrollTrigger: {
     trigger: ".section3 .project-container4",
     start: "top 55%",
-    end: "top 35%",
+    end: "top 55%",
     scrub: 1,
   },
 });
