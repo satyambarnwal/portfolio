@@ -105,6 +105,60 @@ homeLink.forEach((link) => {
   });
 });
 
+const heroSubtitle = document.querySelectorAll("#hero-subtitle p span");
+heroSubtitle.forEach((subtitle) => {
+  subtitle.addEventListener("mouseover", () => {
+    gsap.set(cursor, {
+      scale: 6,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+  });
+
+  subtitle.addEventListener("mouseleave", () => {
+    gsap.set(cursor, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+  });
+});
+
+const menuSocialLink = document.querySelectorAll("#menu-social-link");
+menuSocialLink.forEach((socialLink) => {
+  socialLink.addEventListener("mouseover", () => {
+    gsap.set(cursor, {
+      scale: 5,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+  });
+
+  socialLink.addEventListener("mouseleave", () => {
+    gsap.set(cursor, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+  });
+});
+
 const cta = document.querySelector(".cta-button");
 cta.addEventListener("mouseover", () => {
   gsap.set(cursor, {
@@ -155,6 +209,60 @@ aboutLink.addEventListener("mouseleave", () => {
   });
 });
 
+const description = document.querySelectorAll(".desc");
+description.forEach((info) => {
+  info.addEventListener("mouseover", () => {
+    gsap.set(cursor, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+  });
+
+  info.addEventListener("mouseleave", () => {
+    gsap.set(cursor, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+  });
+});
+
+const liveSite = document.querySelectorAll(".section3 .rolling-text");
+liveSite.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    gsap.set(cursor, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+  });
+
+  link.addEventListener("mouseleave", () => {
+    gsap.set(cursor, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+  });
+});
+
 const workLink = document.querySelector("#work");
 workLink.addEventListener("mouseover", () => {
   gsap.set(cursor, {
@@ -169,6 +277,83 @@ workLink.addEventListener("mouseover", () => {
 });
 
 workLink.addEventListener("mouseleave", () => {
+  gsap.set(cursor, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+});
+
+const footerLink = document.querySelectorAll(".footer-links .rolling-text");
+footerLink.forEach((fLink) => {
+  fLink.addEventListener("mouseover", () => {
+    gsap.set(cursor, {
+      scale: 4.5,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+  });
+
+  fLink.addEventListener("mouseleave", () => {
+    gsap.set(cursor, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+  });
+});
+
+const footerEmail = document.querySelector(".footer-email-btn");
+footerEmail.addEventListener("mouseover", () => {
+  gsap.set(cursor, {
+    scale: 0,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 0,
+    ease: "power4.inOut",
+  });
+});
+
+footerEmail.addEventListener("mouseleave", () => {
+  gsap.set(cursor, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+});
+
+const footerNumber = document.querySelector(".footer-number-btn");
+footerNumber.addEventListener("mouseover", () => {
+  gsap.set(cursor, {
+    scale: 0,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 0,
+    ease: "power4.inOut",
+  });
+});
+
+footerNumber.addEventListener("mouseleave", () => {
   gsap.set(cursor, {
     scale: 1,
     ease: "power4.inOut",
@@ -385,10 +570,10 @@ gsap.to(cta, {
 gsap.to(cta, {
   xPercent: 125,
   scrollTrigger: {
-    trigger: ".section6",
+    trigger: ".section4",
     start: "top 35%",
     end: "top 15%",
-    scrub: 0.5,
+    scrub: 1,
   },
 });
 
@@ -661,110 +846,20 @@ desc4.addEventListener("mouseleave", () => {
   });
 });
 
-gsap.from(".section4 .expertise-heading span", {
+gsap.from(".footer .footer-heading span", {
   opacity: 0,
-  stagger: 0.05,
+  stagger: 0.06,
   scrollTrigger: {
     trigger: ".section4",
-    start: "top 35%",
-    end: "top 20%",
+    start: "bottom 60%",
+    end: "bottom 20%",
     scrub: 1,
-  },
-});
-
-gsap.from(".section4 .expertise-list1 .skill", {
-  opacity: 0,
-  y: 25,
-  stagger: 0.15,
-  scrollTrigger: {
-    trigger: ".section4 .expertise-heading",
-    start: "top 55%",
-    end: "top 30%",
-    scrub: 1.5,
-  },
-});
-
-gsap.from(".section4 .expertise-list2 .skill", {
-  opacity: 0,
-  y: 25,
-  stagger: 0.15,
-  scrollTrigger: {
-    trigger: ".section4 .expertise-heading",
-    start: "top 55%",
-    end: "top 30%",
-    scrub: 1.5,
-  },
-});
-
-gsap.from(".section5 .ending-note span", {
-  opacity: 0,
-  stagger: 0.05,
-  scrollTrigger: {
-    trigger: ".section5",
-    start: "top 60%",
-    end: "top 45%",
-    scrub: 0.25,
-  },
-});
-
-gsap.to(".section5 .ending-note span", {
-  color: "#fff",
-  stagger: 0.05,
-  scrollTrigger: {
-    trigger: ".section5 .ending-note",
-    start: "top 20%",
-    end: "top 5%",
-    scrub: 0.25,
-  },
-});
-
-gsap.from(".section5 .ending-note2 span", {
-  opacity: 0,
-  stagger: 0.05,
-  scrollTrigger: {
-    trigger: ".section6",
-    start: "top bottom",
-    end: "top 80%",
-    scrub: true,
-  },
-});
-
-gsap.to(".section5 .ending-note2 span", {
-  color: "#fff",
-  stagger: 0.05,
-  scrollTrigger: {
-    trigger: ".section6",
-    start: "top 65%",
-    end: "top 40%",
-    scrub: 0.25,
-  },
-});
-
-gsap.from(".section6 .collab-heading span", {
-  opacity: 0,
-  stagger: 0.05,
-  scrollTrigger: {
-    trigger: ".section6",
-    start: "top 35%",
-    end: "top top",
-    scrub: 0.5,
-  },
-});
-
-gsap.from(".footer .footer-heading span", {
-  y: -125,
-  stagger: 0.04,
-  scrollTrigger: {
-    trigger: ".section6",
-    start: "bottom 55%",
-    end: "bottom 25%",
-    scrub: 1.5,
   },
 });
 
 let tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section6",
+    trigger: ".section4",
     start: "bottom 35%",
     toggleActions: "play none none none",
   },
@@ -789,7 +884,7 @@ gsap.to(".progress-bar", {
   scrollTrigger: {
     trigger: ".main",
     start: "top top",
-    end: "bottom 10%",
+    end: "bottom 25%",
     scrub: true,
   },
 });
