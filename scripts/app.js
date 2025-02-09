@@ -11,6 +11,8 @@ window.onbeforeunload = function () {
   document.body.classList.remove("loaded");
 };
 
+//cursor animations
+
 const cursor = document.querySelector("#cursor");
 window.addEventListener("mousemove", function (dets) {
   gsap.to(cursor, {
@@ -127,6 +129,58 @@ cta.addEventListener("mouseleave", () => {
     ease: "power4.inOut",
   });
 });
+
+const aboutLink = document.querySelector("#about");
+aboutLink.addEventListener("mouseover", () => {
+  gsap.set(cursor, {
+    scale: 8,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 0,
+    ease: "power4.inOut",
+  });
+});
+
+aboutLink.addEventListener("mouseleave", () => {
+  gsap.set(cursor, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+});
+
+const workLink = document.querySelector("#work");
+workLink.addEventListener("mouseover", () => {
+  gsap.set(cursor, {
+    scale: 8,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 0,
+    ease: "power4.inOut",
+  });
+});
+
+workLink.addEventListener("mouseleave", () => {
+  gsap.set(cursor, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+});
+
+//landing page animation
 
 gsap.from(cta, {
   x: 300,
@@ -258,19 +312,29 @@ gsap.to("nav .nav-links", {
   x: -90,
   opacity: 0,
   scrollTrigger: {
-    trigger: ".section1 .title",
-    start: "top 5%",
-    end: "bottom 5%",
+    trigger: ".section2",
+    start: "top 60%",
+    end: "top 55%",
     scrub: 0.5,
+  },
+});
+
+gsap.to("nav .nav-links", {
+  display: "none",
+  scrollTrigger: {
+    trigger: ".section2",
+    start: "top 55%",
+    end: "top 55%",
+    scrub: true,
   },
 });
 
 gsap.to("nav .menu-toggle", {
   y: 0,
   scrollTrigger: {
-    trigger: ".section1 .title",
-    start: "top 0%",
-    end: "bottom 0%",
+    trigger: ".section2",
+    start: "top 55%",
+    end: "top 50%",
     scrub: 0.5,
   },
 });
@@ -345,9 +409,9 @@ gsap.from(".section2 .about-description p", {
   stagger: 0.15,
   scrollTrigger: {
     trigger: ".section2",
-    start: "top 30%",
+    start: "top 40%",
     end: "top 15%",
-    scrub: 1.5,
+    scrub: 1,
   },
 });
 
@@ -413,16 +477,6 @@ gsap.to(".section3 .project-container4", {
   },
 });
 
-gsap.from(".section3 .counter1 p", {
-  yPercent: 100,
-  scrollTrigger: {
-    trigger: ".section3 .project-container1",
-    start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
-  },
-});
-
 gsap.from(".section3 .title1 p", {
   yPercent: 100,
   scrollTrigger: {
@@ -433,14 +487,40 @@ gsap.from(".section3 .title1 p", {
   },
 });
 
-gsap.from(".section3 .counter2 p", {
-  yPercent: 100,
-  scrollTrigger: {
-    trigger: ".section3 .project-container2",
-    start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
-  },
+const desc1 = document.querySelector("#desc1");
+const desc1Box = document.querySelector(".desc1-box");
+desc1.addEventListener("mouseover", () => {
+  gsap.to(desc1Box, {
+    scale: 1,
+    opacity: 1,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc1-box p", {
+    color: "#444",
+    opacity: 1,
+  });
+
+  gsap.from(".desc1-box p", {
+    opacity: 0,
+    delay: 0.1,
+    ease: "power1.out",
+  });
+});
+
+desc1.addEventListener("mouseleave", () => {
+  gsap.to(desc1Box, {
+    scale: 0,
+    opacity: 0,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc1-box p", {
+    color: "#444",
+    opacity: 0,
+  });
 });
 
 gsap.from(".section3 .title2 p", {
@@ -453,14 +533,40 @@ gsap.from(".section3 .title2 p", {
   },
 });
 
-gsap.from(".section3 .counter3 p", {
-  yPercent: 100,
-  scrollTrigger: {
-    trigger: ".section3 .project-container3",
-    start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
-  },
+const desc2 = document.querySelector("#desc2");
+const desc2Box = document.querySelector(".desc2-box");
+desc2.addEventListener("mouseover", () => {
+  gsap.to(desc2Box, {
+    scale: 1,
+    opacity: 1,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc2-box p", {
+    color: "#444",
+    opacity: 1,
+  });
+
+  gsap.from(".desc2-box p", {
+    opacity: 0,
+    delay: 0.1,
+    ease: "power1.out",
+  });
+});
+
+desc2.addEventListener("mouseleave", () => {
+  gsap.to(desc2Box, {
+    scale: 0,
+    opacity: 0,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc2-box p", {
+    color: "#444",
+    opacity: 0,
+  });
 });
 
 gsap.from(".section3 .title3 p", {
@@ -473,14 +579,40 @@ gsap.from(".section3 .title3 p", {
   },
 });
 
-gsap.from(".section3 .counter4 p", {
-  yPercent: 100,
-  scrollTrigger: {
-    trigger: ".section3 .project-container4",
-    start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
-  },
+const desc3 = document.querySelector("#desc3");
+const desc3Box = document.querySelector(".desc3-box");
+desc3.addEventListener("mouseover", () => {
+  gsap.to(desc3Box, {
+    scale: 1,
+    opacity: 1,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc3-box p", {
+    color: "#444",
+    opacity: 1,
+  });
+
+  gsap.from(".desc3-box p", {
+    opacity: 0,
+    delay: 0.1,
+    ease: "power1.out",
+  });
+});
+
+desc3.addEventListener("mouseleave", () => {
+  gsap.to(desc3Box, {
+    scale: 0,
+    opacity: 0,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc3-box p", {
+    color: "#444",
+    opacity: 0,
+  });
 });
 
 gsap.from(".section3 .title4 p", {
@@ -491,6 +623,42 @@ gsap.from(".section3 .title4 p", {
     end: "top 55%",
     scrub: 1,
   },
+});
+
+const desc4 = document.querySelector("#desc4");
+const desc4Box = document.querySelector(".desc4-box");
+desc4.addEventListener("mouseover", () => {
+  gsap.to(desc4Box, {
+    scale: 1,
+    opacity: 1,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc4-box p", {
+    color: "#444",
+    opacity: 1,
+  });
+
+  gsap.from(".desc4-box p", {
+    opacity: 0,
+    delay: 0.1,
+    ease: "power1.out",
+  });
+});
+
+desc4.addEventListener("mouseleave", () => {
+  gsap.to(desc4Box, {
+    scale: 0,
+    opacity: 0,
+    duration: 0.25,
+    ease: "power1.out",
+  });
+
+  gsap.set(".desc4-box p", {
+    color: "#444",
+    opacity: 0,
+  });
 });
 
 gsap.from(".section4 .expertise-heading span", {
@@ -588,8 +756,8 @@ gsap.from(".footer .footer-heading span", {
   stagger: 0.04,
   scrollTrigger: {
     trigger: ".section6",
-    start: "bottom 50%",
-    end: "bottom 10%",
+    start: "bottom 55%",
+    end: "bottom 25%",
     scrub: 1.5,
   },
 });
@@ -597,7 +765,7 @@ gsap.from(".footer .footer-heading span", {
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".section6",
-    start: "bottom 15%",
+    start: "bottom 35%",
     toggleActions: "play none none none",
   },
 });

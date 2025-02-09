@@ -176,31 +176,6 @@ body.loaded {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 
-#project-link1 {
-  z-index: 1000;
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%) scale(0);
-  transform-origin: center;
-  top: 0%;
-  left: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.075) 0px 3px 8px;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-family: aeonik-light;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  background-color: #fc989a;
-  color: white;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
-}
-
 nav {
   position: fixed;
   top: 1rem;
@@ -566,30 +541,12 @@ nav {
       cursor: pointer;
     }
 
-    .know-more::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 5%;
-      background-color: var(--black);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .know-more:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
     ion-icon {
       font-size: 25px;
       transform: rotate(45deg);
       --ionicon-stroke-width: 15px;
       will-change: transform;
-      transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     p:nth-child(6):hover ion-icon {
@@ -605,8 +562,8 @@ nav {
     position: absolute;
     top: 25%;
     left: 0;
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     background-color: springgreen;
     border-radius: 50%;
 
@@ -726,6 +683,75 @@ nav {
       }
     }
 
+    .stack1 {
+      position: absolute;
+      top: 20%;
+      left: 2%;
+      display: flex;
+      gap: 10px;
+
+      p {
+        cursor: default;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid var(--white);
+        color: var(--white);
+        font-family: nohemi-thin;
+        font-weight: 900;
+        letter-spacing: 1px;
+        transition: all ease-out 0.1s;
+      }
+
+      p:hover {
+        background-color: var(--white);
+        color: #fc989a;
+      }
+
+      p:nth-child(3) {
+        position: absolute;
+        top: calc(100% + 10px);
+      }
+    }
+
+    .desc1 {
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: var(--white);
+
+      #desc1 {
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .desc1-box {
+        position: absolute;
+        top: 125%;
+        left: 0;
+        width: 332px;
+        padding: 15px;
+        background-color: var(--white);
+        border-radius: 10px;
+        scale: 0;
+        opacity: 0;
+        transform-origin: top left;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px;
+
+        p {
+          font-size: 20px;
+          font-family: nohemi-thin;
+          font-weight: 900;
+          line-height: 32px;
+          letter-spacing: 0.5px;
+          color: #444;
+        }
+      }
+    }
+
     .link1 {
       position: absolute;
       bottom: 6%;
@@ -733,7 +759,6 @@ nav {
       height: 40px;
       display: flex;
       justify-content: center;
-      overflow: hidden;
 
       a {
         text-decoration: none;
@@ -751,7 +776,7 @@ nav {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 3%;
+        height: 4%;
         background-color: var(--white);
         transform: scaleX(0);
         transform-origin: right;
@@ -830,6 +855,75 @@ nav {
       }
     }
 
+    .stack2 {
+      position: absolute;
+      top: 20%;
+      left: 2%;
+      display: flex;
+      gap: 10px;
+
+      p {
+        cursor: default;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid var(--white);
+        color: var(--white);
+        font-family: nohemi-thin;
+        font-weight: 900;
+        letter-spacing: 1px;
+        transition: all ease-out 0.1s;
+      }
+
+      p:hover {
+        background-color: var(--white);
+        color: #6492ff;
+      }
+
+      p:nth-child(3) {
+        position: absolute;
+        top: calc(100% + 10px);
+      }
+    }
+
+    .desc2 {
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: var(--white);
+
+      #desc2 {
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .desc2-box {
+        position: absolute;
+        top: 125%;
+        left: 0;
+        width: 275px;
+        padding: 15px;
+        background-color: var(--white);
+        border-radius: 10px;
+        scale: 0;
+        opacity: 0;
+        transform-origin: top left;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px;
+
+        p {
+          font-size: 20px;
+          font-family: nohemi-thin;
+          font-weight: 900;
+          line-height: 32px;
+          letter-spacing: 0.5px;
+          color: #444;
+        }
+      }
+    }
+
     .link2 {
       position: absolute;
       bottom: 6%;
@@ -837,7 +931,6 @@ nav {
       height: 40px;
       display: flex;
       justify-content: center;
-      overflow: hidden;
 
       a {
         text-decoration: none;
@@ -855,7 +948,7 @@ nav {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 3%;
+        height: 4%;
         background-color: var(--white);
         transform: scaleX(0);
         transform-origin: right;
@@ -934,6 +1027,75 @@ nav {
       }
     }
 
+    .stack3 {
+      position: absolute;
+      top: 20%;
+      left: 2%;
+      display: flex;
+      gap: 10px;
+
+      p {
+        cursor: default;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid var(--white);
+        color: var(--white);
+        font-family: nohemi-thin;
+        font-weight: 900;
+        letter-spacing: 1px;
+        transition: all ease-out 0.1s;
+      }
+
+      p:hover {
+        background-color: var(--white);
+        color: #152638;
+      }
+
+      p:nth-child(3) {
+        position: absolute;
+        top: calc(100% + 10px);
+      }
+    }
+
+    .desc3 {
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: var(--white);
+
+      #desc3 {
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .desc3-box {
+        position: absolute;
+        top: 125%;
+        left: 0;
+        width: 310px;
+        padding: 15px;
+        background-color: var(--white);
+        border-radius: 10px;
+        scale: 0;
+        opacity: 0;
+        transform-origin: top left;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px;
+
+        p {
+          font-size: 20px;
+          font-family: nohemi-thin;
+          font-weight: 900;
+          line-height: 32px;
+          letter-spacing: 0.5px;
+          color: #444;
+        }
+      }
+    }
+
     .link3 {
       position: absolute;
       bottom: 6%;
@@ -941,7 +1103,6 @@ nav {
       height: 40px;
       display: flex;
       justify-content: center;
-      overflow: hidden;
 
       a {
         text-decoration: none;
@@ -959,7 +1120,7 @@ nav {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 3%;
+        height: 4%;
         background-color: var(--white);
         transform: scaleX(0);
         transform-origin: right;
@@ -1038,6 +1199,81 @@ nav {
       }
     }
 
+    .stack4 {
+      position: absolute;
+      top: 20%;
+      left: 2%;
+      display: flex;
+      gap: 10px;
+
+      p {
+        cursor: default;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid var(--white);
+        color: var(--white);
+        font-family: nohemi-thin;
+        font-weight: 900;
+        letter-spacing: 1px;
+        transition: all ease-out 0.1s;
+      }
+
+      p:hover {
+        background-color: var(--white);
+        color: #bcad97;
+      }
+
+      p:nth-child(3) {
+        position: absolute;
+        top: calc(100% + 10px);
+      }
+
+      p:nth-child(4) {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 44%;
+      }
+    }
+
+    .desc4 {
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: var(--white);
+
+      #desc4 {
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .desc4-box {
+        position: absolute;
+        top: 125%;
+        left: 0;
+        width: 332px;
+        padding: 15px;
+        background-color: var(--white);
+        border-radius: 10px;
+        scale: 0;
+        opacity: 0;
+        transform-origin: top left;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px;
+
+        p {
+          font-size: 20px;
+          font-family: nohemi-thin;
+          font-weight: 900;
+          line-height: 32px;
+          letter-spacing: 0.5px;
+          color: #444;
+        }
+      }
+    }
+
     .link4 {
       position: absolute;
       bottom: 6%;
@@ -1045,7 +1281,6 @@ nav {
       height: 40px;
       display: flex;
       justify-content: center;
-      overflow: hidden;
 
       a {
         text-decoration: none;
@@ -1063,7 +1298,7 @@ nav {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 3%;
+        height: 4%;
         background-color: var(--white);
         transform: scaleX(0);
         transform-origin: right;
@@ -1079,6 +1314,29 @@ nav {
       .rolling-text .block:last-child {
         color: var(--white);
       }
+    }
+  }
+
+  .link-pulse {
+    position: absolute;
+    top: 5%;
+    right: -12.5%;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: inherit;
+      opacity: 0.75;
+      transform-origin: center;
+      animation: pulseAnimate 1.35s ease-in-out infinite;
     }
   }
 }
@@ -1109,24 +1367,6 @@ nav {
       font-weight: 900;
       height: 1.85rem;
       cursor: pointer;
-    }
-
-    .all-projects::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 5%;
-      background-color: var(--black);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .all-projects:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
     }
 
     ion-icon {
@@ -1358,7 +1598,7 @@ nav {
 
 .footer {
   width: 100%;
-  height: 90vh;
+  height: 75vh;
   position: sticky;
   bottom: 0;
   z-index: -1;
@@ -1534,7 +1774,7 @@ nav {
       a {
         text-decoration: none;
         color: var(--white);
-        height: 82%;
+        height: 80%;
       }
     }
 
@@ -1571,14 +1811,14 @@ nav {
     #menu-social-link::after {
       content: "";
       position: absolute;
-      bottom: -1px;
+      bottom: 0;
       left: 0;
       width: 100%;
       height: 1px;
       background-color: var(--white);
       transform: scaleX(0);
       transform-origin: right;
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     #menu-social-link:hover::after {
