@@ -710,6 +710,7 @@ nav {
         height: 24px;
         display: flex;
         width: fit-content;
+        overflow: hidden;
 
         a {
           text-decoration: none;
@@ -821,6 +822,7 @@ nav {
         height: 24px;
         display: flex;
         width: fit-content;
+        overflow: hidden;
 
         a {
           text-decoration: none;
