@@ -699,7 +699,7 @@ gsap.from(".section3 .link1 a", {
   ease: "power1.out",
   scrollTrigger: {
     trigger: ".section3 .project-container1",
-    start: "top 30%",
+    start: "top 40%",
   },
 });
 
