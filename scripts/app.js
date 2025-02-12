@@ -187,7 +187,7 @@ cta.addEventListener("mouseleave", () => {
 const aboutLink = document.querySelector("#about");
 aboutLink.addEventListener("mouseover", () => {
   gsap.set(cursor, {
-    scale: 8,
+    scale: 6,
     ease: "power4.inOut",
   });
 
@@ -266,7 +266,7 @@ liveSite.forEach((link) => {
 const workLink = document.querySelector("#work");
 workLink.addEventListener("mouseover", () => {
   gsap.set(cursor, {
-    scale: 8,
+    scale: 6,
     ease: "power4.inOut",
   });
 
@@ -474,12 +474,12 @@ gsap.to(heroImg, {
 //scroll triggers
 
 gsap.to(".scroll-text", {
-  y: -25,
+  yPercent: -100,
   scrollTrigger: {
     trigger: ".section1",
     start: "bottom 80%",
     end: "bottom 50%",
-    scrub: true,
+    scrub: 1,
   },
 });
 
@@ -616,8 +616,8 @@ gsap.from(".section3 .project-container1", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".section3 .project-container1",
-    start: "top 80%",
-    end: "top 65%",
+    start: "top 85%",
+    end: "top 70%",
     scrub: 1,
   },
 });
@@ -664,196 +664,176 @@ gsap.to(".section3 .project-container4", {
 
 gsap.from(".section3 .title1 p", {
   yPercent: 100,
+  scale: 0.8,
+  duration: 0.6,
+  ease: "power1.out",
   scrollTrigger: {
     trigger: ".section3 .project-container1",
-    start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
+    start: "top 65%",
   },
 });
 
-const desc1 = document.querySelector("#desc1");
-const desc1Box = document.querySelector(".desc1-box");
-desc1.addEventListener("mouseover", () => {
-  gsap.to(desc1Box, {
-    scale: 1,
-    opacity: 1,
-    duration: 0.25,
-    ease: "power1.out",
-  });
-
-  gsap.set(".desc1-box p", {
-    color: "#444",
-    opacity: 1,
-  });
-
-  gsap.from(".desc1-box p", {
-    opacity: 0,
-    delay: 0.1,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .desc1 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container1",
+    start: "top 50%",
+  },
 });
 
-desc1.addEventListener("mouseleave", () => {
-  gsap.to(desc1Box, {
-    scale: 0,
-    opacity: 0,
-    duration: 0.25,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .stack1 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container1",
+    start: "top 40%",
+  },
+});
 
-  gsap.set(".desc1-box p", {
-    color: "#444",
-    opacity: 0,
-  });
+gsap.from(".section3 .link1 a", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container1",
+    start: "top 30%",
+  },
 });
 
 gsap.from(".section3 .title2 p", {
   yPercent: 100,
+  scale: 0.8,
+  duration: 0.6,
+  ease: "power1.out",
   scrollTrigger: {
     trigger: ".section3 .project-container2",
     start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
   },
 });
 
-const desc2 = document.querySelector("#desc2");
-const desc2Box = document.querySelector(".desc2-box");
-desc2.addEventListener("mouseover", () => {
-  gsap.to(desc2Box, {
-    scale: 1,
-    opacity: 1,
-    duration: 0.25,
-    ease: "power1.out",
-  });
-
-  gsap.set(".desc2-box p", {
-    color: "#444",
-    opacity: 1,
-  });
-
-  gsap.from(".desc2-box p", {
-    opacity: 0,
-    delay: 0.1,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .desc2 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container2",
+    start: "top 40%",
+  },
 });
 
-desc2.addEventListener("mouseleave", () => {
-  gsap.to(desc2Box, {
-    scale: 0,
-    opacity: 0,
-    duration: 0.25,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .stack2 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container2",
+    start: "top 30%",
+  },
+});
 
-  gsap.set(".desc2-box p", {
-    color: "#444",
-    opacity: 0,
-  });
+gsap.from(".section3 .link2 a", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container2",
+    start: "top 30%",
+  },
 });
 
 gsap.from(".section3 .title3 p", {
   yPercent: 100,
+  scale: 0.8,
+  duration: 0.6,
+  ease: "power1.out",
   scrollTrigger: {
     trigger: ".section3 .project-container3",
     start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
   },
 });
 
-const desc3 = document.querySelector("#desc3");
-const desc3Box = document.querySelector(".desc3-box");
-desc3.addEventListener("mouseover", () => {
-  gsap.to(desc3Box, {
-    scale: 1,
-    opacity: 1,
-    duration: 0.25,
-    ease: "power1.out",
-  });
-
-  gsap.set(".desc3-box p", {
-    color: "#444",
-    opacity: 1,
-  });
-
-  gsap.from(".desc3-box p", {
-    opacity: 0,
-    delay: 0.1,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .desc3 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container3",
+    start: "top 40%",
+  },
 });
 
-desc3.addEventListener("mouseleave", () => {
-  gsap.to(desc3Box, {
-    scale: 0,
-    opacity: 0,
-    duration: 0.25,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .stack3 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container3",
+    start: "top 30%",
+  },
+});
 
-  gsap.set(".desc3-box p", {
-    color: "#444",
-    opacity: 0,
-  });
+gsap.from(".section3 .link3 a", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container3",
+    start: "top 30%",
+  },
 });
 
 gsap.from(".section3 .title4 p", {
   yPercent: 100,
+  scale: 0.8,
+  duration: 0.6,
+  ease: "power1.out",
   scrollTrigger: {
     trigger: ".section3 .project-container4",
     start: "top 55%",
-    end: "top 55%",
-    scrub: 1,
   },
 });
 
-const desc4 = document.querySelector("#desc4");
-const desc4Box = document.querySelector(".desc4-box");
-desc4.addEventListener("mouseover", () => {
-  gsap.to(desc4Box, {
-    scale: 1,
-    opacity: 1,
-    duration: 0.25,
-    ease: "power1.out",
-  });
-
-  gsap.set(".desc4-box p", {
-    color: "#444",
-    opacity: 1,
-  });
-
-  gsap.from(".desc4-box p", {
-    opacity: 0,
-    delay: 0.1,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .desc4 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container4",
+    start: "top 40%",
+  },
 });
 
-desc4.addEventListener("mouseleave", () => {
-  gsap.to(desc4Box, {
-    scale: 0,
-    opacity: 0,
-    duration: 0.25,
-    ease: "power1.out",
-  });
+gsap.from(".section3 .stack4 div p", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container4",
+    start: "top 30%",
+  },
+});
 
-  gsap.set(".desc4-box p", {
-    color: "#444",
-    opacity: 0,
-  });
+gsap.from(".section3 .link4 a", {
+  yPercent: 100,
+  duration: 0.6,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".section3 .project-container4",
+    start: "top 30%",
+  },
 });
 
 gsap.from(".footer .footer-heading span", {
   opacity: 0,
-  stagger: 0.06,
+  stagger: 0.05,
+  duration: 0.8,
+  ease: "power1.inOut",
   scrollTrigger: {
     trigger: ".section4",
-    start: "bottom 60%",
-    end: "bottom 20%",
-    scrub: 1,
+    start: "bottom 50%",
   },
 });
 
@@ -867,8 +847,9 @@ let tl = gsap.timeline({
 
 tl.to("svg path", {
   strokeDashoffset: 0,
-  duration: 3,
-  ease: "power1.inOut",
+  delay: 0.75,
+  duration: 4,
+  ease: "power3.inOut",
 }).to(
   "svg path",
   {
