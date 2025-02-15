@@ -344,12 +344,32 @@ nav {
       a {
         text-decoration: none;
         color: var(--white);
-        height: 82%;
+        height: 80%;
       }
+
+      .rolling-text .block:last-child {
+        font-style: italic;
+      }
+    }
+
+    #menu-link:nth-child(1) span:nth-child(4) {
+      width: 75px;
     }
 
     #menu-link:nth-child(2) span:nth-child(1) {
       width: 97.5px;
+    }
+
+    #menu-link:nth-child(2) span:nth-child(4) {
+      width: 75px;
+    }
+
+    #menu-link:nth-child(3) span:nth-child(5) {
+      width: 75px;
+    }
+
+    #menu-link:nth-child(4) span:nth-child(7) {
+      width: 75px;
     }
   }
 
@@ -365,11 +385,10 @@ nav {
     overflow: hidden;
 
     #menu-social-link {
-      font-size: 1.2rem;
+      font-size: 18px;
       font-family: aeonik-regular;
       display: flex;
-      align-items: center;
-      height: 25px;
+      height: 22px;
       will-change: transform;
 
       a {
@@ -378,22 +397,8 @@ nav {
       }
     }
 
-    #menu-social-link::after {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: var(--white);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    #menu-social-link:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
+    .rolling-text .block:last-child {
+      color: var(--white);
     }
   }
 
@@ -444,7 +449,7 @@ nav {
 
   .navigation-toggle {
     position: absolute;
-    top: 6rem;
+    top: 15%;
     left: 4.25rem;
     font-size: 0.9rem;
     font-family: aeonik-light;
@@ -461,7 +466,7 @@ nav {
 
   .socials-toggle {
     position: absolute;
-    bottom: 4.25rem;
+    bottom: 10%;
     left: 4.25rem;
     font-size: 0.9rem;
     font-family: aeonik-light;

@@ -58,6 +58,33 @@ homeLink.forEach((link) => {
   });
 });
 
+const menuSocialLink = document.querySelectorAll("#menu-social-link");
+menuSocialLink.forEach((socialLink) => {
+  socialLink.addEventListener("mouseover", () => {
+    gsap.set(cursor, {
+      scale: 5,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 0,
+      ease: "power4.inOut",
+    });
+  });
+
+  socialLink.addEventListener("mouseleave", () => {
+    gsap.set(cursor, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+
+    gsap.set(cursor2, {
+      scale: 1,
+      ease: "power4.inOut",
+    });
+  });
+});
+
 const cta = document.querySelector(".cta-button");
 cta.addEventListener("mouseover", () => {
   gsap.set(cursor, {

@@ -209,33 +209,6 @@ aboutLink.addEventListener("mouseleave", () => {
   });
 });
 
-const description = document.querySelectorAll(".desc");
-description.forEach((info) => {
-  info.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
-      scale: 0,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
-    });
-  });
-
-  info.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
-      scale: 1,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 1,
-      ease: "power4.inOut",
-    });
-  });
-});
-
 const liveSite = document.querySelectorAll(".section3 .rolling-text");
 liveSite.forEach((link) => {
   link.addEventListener("mouseover", () => {
@@ -288,11 +261,11 @@ workLink.addEventListener("mouseleave", () => {
   });
 });
 
-const footerLink = document.querySelectorAll(".footer-links .rolling-text");
-footerLink.forEach((fLink) => {
-  fLink.addEventListener("mouseover", () => {
+const services = document.querySelectorAll(".service-box");
+services.forEach((service) => {
+  service.addEventListener("mouseover", () => {
     gsap.set(cursor, {
-      scale: 4.5,
+      scale: 6,
       ease: "power4.inOut",
     });
 
@@ -302,7 +275,7 @@ footerLink.forEach((fLink) => {
     });
   });
 
-  fLink.addEventListener("mouseleave", () => {
+  service.addEventListener("mouseleave", () => {
     gsap.set(cursor, {
       scale: 1,
       ease: "power4.inOut",
@@ -315,10 +288,35 @@ footerLink.forEach((fLink) => {
   });
 });
 
-const footerEmail = document.querySelector(".footer-email-btn");
+const footer = document.querySelector(".collab-box");
+footer.addEventListener("mouseover", () => {
+  gsap.set(cursor, {
+    scale: 2,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 0,
+    ease: "power4.inOut",
+  });
+});
+
+footer.addEventListener("mouseleave", () => {
+  gsap.set(cursor, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+
+  gsap.set(cursor2, {
+    scale: 1,
+    ease: "power4.inOut",
+  });
+});
+
+const footerEmail = document.querySelector(".footer-email");
 footerEmail.addEventListener("mouseover", () => {
   gsap.set(cursor, {
-    scale: 0,
+    scale: 2.5,
     ease: "power4.inOut",
   });
 
@@ -329,31 +327,6 @@ footerEmail.addEventListener("mouseover", () => {
 });
 
 footerEmail.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
-    scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
-  });
-});
-
-const footerNumber = document.querySelector(".footer-number-btn");
-footerNumber.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 0,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
-  });
-});
-
-footerNumber.addEventListener("mouseleave", () => {
   gsap.set(cursor, {
     scale: 1,
     ease: "power4.inOut",
@@ -570,9 +543,9 @@ gsap.to(cta, {
 gsap.to(cta, {
   xPercent: 125,
   scrollTrigger: {
-    trigger: ".section4",
-    start: "top 35%",
-    end: "top 15%",
+    trigger: ".section5",
+    start: "bottom 40%",
+    end: "bottom 20%",
     scrub: 1,
   },
 });
@@ -662,9 +635,19 @@ gsap.to(".section3 .project-container4", {
   },
 });
 
+gsap.to(".link-container1", {
+  x: -10,
+  scrollTrigger: {
+    trigger: ".project-container1",
+    start: "top 50%",
+    end: "top 30%",
+    scrub: 1,
+  },
+});
+
 gsap.from(".section3 .title1 p", {
   yPercent: 100,
-  scale: 0.8,
+  scale: 0.9,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -675,6 +658,7 @@ gsap.from(".section3 .title1 p", {
 
 gsap.from(".section3 .desc1 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -685,6 +669,7 @@ gsap.from(".section3 .desc1 div p", {
 
 gsap.from(".section3 .stack1 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -695,6 +680,7 @@ gsap.from(".section3 .stack1 div p", {
 
 gsap.from(".section3 .link1 a", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -703,9 +689,19 @@ gsap.from(".section3 .link1 a", {
   },
 });
 
+gsap.to(".link-container2", {
+  x: -10,
+  scrollTrigger: {
+    trigger: ".project-container2",
+    start: "top 50%",
+    end: "top 30%",
+    scrub: 1,
+  },
+});
+
 gsap.from(".section3 .title2 p", {
   yPercent: 100,
-  scale: 0.8,
+  scale: 0.9,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -716,6 +712,7 @@ gsap.from(".section3 .title2 p", {
 
 gsap.from(".section3 .desc2 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -726,6 +723,7 @@ gsap.from(".section3 .desc2 div p", {
 
 gsap.from(".section3 .stack2 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -736,6 +734,7 @@ gsap.from(".section3 .stack2 div p", {
 
 gsap.from(".section3 .link2 a", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -744,9 +743,19 @@ gsap.from(".section3 .link2 a", {
   },
 });
 
+gsap.to(".link-container3", {
+  x: -10,
+  scrollTrigger: {
+    trigger: ".project-container3",
+    start: "top 50%",
+    end: "top 30%",
+    scrub: 1,
+  },
+});
+
 gsap.from(".section3 .title3 p", {
   yPercent: 100,
-  scale: 0.8,
+  scale: 0.9,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -757,6 +766,7 @@ gsap.from(".section3 .title3 p", {
 
 gsap.from(".section3 .desc3 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -767,6 +777,7 @@ gsap.from(".section3 .desc3 div p", {
 
 gsap.from(".section3 .stack3 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -777,6 +788,7 @@ gsap.from(".section3 .stack3 div p", {
 
 gsap.from(".section3 .link3 a", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -785,9 +797,19 @@ gsap.from(".section3 .link3 a", {
   },
 });
 
+gsap.to(".link-container4", {
+  x: -10,
+  scrollTrigger: {
+    trigger: ".project-container4",
+    start: "top 50%",
+    end: "top 30%",
+    scrub: 1,
+  },
+});
+
 gsap.from(".section3 .title4 p", {
   yPercent: 100,
-  scale: 0.8,
+  scale: 0.9,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -798,6 +820,7 @@ gsap.from(".section3 .title4 p", {
 
 gsap.from(".section3 .desc4 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -808,6 +831,7 @@ gsap.from(".section3 .desc4 div p", {
 
 gsap.from(".section3 .stack4 div p", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -818,6 +842,7 @@ gsap.from(".section3 .stack4 div p", {
 
 gsap.from(".section3 .link4 a", {
   yPercent: 100,
+  rotate: 1,
   duration: 0.6,
   ease: "power1.out",
   scrollTrigger: {
@@ -826,46 +851,102 @@ gsap.from(".section3 .link4 a", {
   },
 });
 
+gsap.from(".section5 .services-heading span", {
+  opacity: 0,
+  stagger: 0.05,
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top 40%",
+    end: "top 15%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section5 .service-box", {
+  yPercent: 80,
+  rotate: 5,
+  stagger: 0.06,
+  scrollTrigger: {
+    trigger: ".services-container",
+    start: "top bottom",
+    end: "top 50%",
+    scrub: 1,
+  },
+});
+
+gsap.from(".section5 .service-box .service-title p", {
+  yPercent: -125,
+  rotate: 1,
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".section5 .services-container",
+    start: "top 80%",
+    end: "top 60%",
+    scrub: 1,
+  },
+});
+
 gsap.from(".footer .footer-heading span", {
   opacity: 0,
   stagger: 0.05,
-  duration: 0.8,
-  ease: "power1.inOut",
   scrollTrigger: {
-    trigger: ".section4",
-    start: "bottom 50%",
+    trigger: ".footer",
+    start: "top 40%",
+    end: "top 15%",
+    scrub: 1,
   },
 });
 
-let tl = gsap.timeline({
+gsap.to(".footer .collab-box", {
+  clipPath: "inset(6% 2.5% 6% 2.5% round 15px)", // using inset with rounded corners
   scrollTrigger: {
-    trigger: ".section4",
-    start: "bottom 35%",
-    toggleActions: "play none none none",
+    trigger: ".footer .collab-box",
+    start: "top 90%",
+    end: "top top",
+    scrub: 1,
   },
 });
 
-tl.to("svg path", {
-  strokeDashoffset: 0,
-  delay: 0.75,
-  duration: 4,
-  ease: "power3.inOut",
-}).to(
-  "svg path",
-  {
-    fill: "white",
-    duration: 0.8,
-    ease: "power1.inOut",
+gsap.from(".collab-heading1 p span", {
+  yPercent: -120,
+  duration: 0.75,
+  stagger: 0.015,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".collab-heading1",
+    start: "top 50%",
   },
-  ">-0.8"
-); // Starts fill animation when stroke is 80% complete (4s * 0.8 = 3.2s)
+});
+
+gsap.from(".collab-heading2 p span", {
+  yPercent: -120,
+  duration: 0.75,
+  stagger: 0.015,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".collab-heading1",
+    start: "top 50%",
+  },
+});
+
+gsap.to(".amazing", {
+  color: "#fff",
+  duration: 0.65,
+  stagger: 0.08,
+  delay: 1.5,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".collab-heading1",
+    start: "top 50%",
+  },
+});
 
 gsap.to(".progress-bar", {
   y: "900%",
   scrollTrigger: {
     trigger: ".main",
     start: "top top",
-    end: "bottom 25%",
+    end: "bottom bottom",
     scrub: true,
   },
 });
@@ -1039,50 +1120,5 @@ buttons.forEach((button) => {
     span.style.transitionDelay = `${0 + index * 0.02}s`; // Increment transition delay for each character
 
     button.appendChild(span);
-  });
-});
-
-document.querySelectorAll(".skill").forEach((skill) => {
-  skill.addEventListener("mouseenter", function () {
-    if (this.querySelector(".clone")) return;
-
-    const clone = this.cloneNode(true);
-    clone.classList.add("clone");
-
-    gsap.set(clone, {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      yPercent: 100,
-      backgroundColor: "#000",
-      color: "#fff",
-    });
-
-    this.appendChild(clone);
-
-    gsap.to(clone, {
-      yPercent: 0,
-      duration: 0.35,
-      ease: "power1.out",
-    });
-  });
-
-  skill.addEventListener("mouseleave", function () {
-    const clone = this.querySelector(".clone");
-    if (!clone) return;
-
-    gsap.to(clone, {
-      yPercent: 100,
-      duration: 0.35,
-      ease: "power1.out",
-      onComplete: () => {
-        if (clone && clone.parentNode) {
-          clone.parentNode.removeChild(clone);
-        }
-        gsap.set(this, { clearProps: "yPercent" });
-      },
-    });
   });
 });
