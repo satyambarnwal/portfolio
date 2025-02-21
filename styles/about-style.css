@@ -100,6 +100,16 @@ body.loaded {
   opacity: 1;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 10%;
+  width: 4px;
+  background-color: #222;
+  z-index: 1;
+}
+
 #cursor {
   z-index: 1000;
   pointer-events: none;
@@ -108,26 +118,10 @@ body.loaded {
   top: 0;
   left: 0;
   border-radius: 50%;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 15px;
+  height: 15px;
   background-color: var(--white);
   mix-blend-mode: difference;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
-}
-
-#cursor2 {
-  z-index: 999;
-  pointer-events: none;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  width: 2.25rem;
-  height: 2.25rem;
-  border: 0.5px solid var(--white);
-  mix-blend-mode: difference;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 
 nav {
@@ -280,22 +274,26 @@ nav {
     .about-title {
       display: flex;
       font-size: 14vw;
-      font-family: nohemi-medium;
+      font-family: nohemi-bold;
+
+      span {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
 
       span:nth-child(1) {
-        width: 9.85vw;
+        width: 10.25vw;
       }
 
       span:nth-child(2) {
-        width: 8.4vw;
+        width: 8.65vw;
       }
 
       span:nth-child(3) {
-        width: 8.1vw;
+        width: 8.45vw;
       }
 
       span:nth-child(4) {
-        width: 8vw;
+        width: 8.4vw;
       }
     }
   }

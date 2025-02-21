@@ -18,18 +18,8 @@ window.addEventListener("mousemove", function (dets) {
   gsap.to(cursor, {
     x: dets.clientX,
     y: dets.clientY,
-    duration: 0,
-    ease: Expo.easeInOut,
-  });
-});
-
-const cursor2 = document.querySelector("#cursor2");
-window.addEventListener("mousemove", function (dets) {
-  gsap.to(cursor2, {
-    x: dets.clientX,
-    y: dets.clientY,
-    duration: 0.5,
-    ease: Expo.easeOut,
+    duration: 1,
+    ease: "elastic.out(1,0.2)",
   });
 });
 
@@ -54,11 +44,6 @@ heroImg.addEventListener("mouseover", () => {
     scale: 0,
     ease: "power4.inOut",
   });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
-  });
 });
 
 heroImg.addEventListener("mouseleave", () => {
@@ -71,36 +56,21 @@ heroImg.addEventListener("mouseleave", () => {
     scale: 1,
     ease: "power4.inOut",
   });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
-  });
 });
 
 const homeLink = document.querySelectorAll(".home-link");
 homeLink.forEach((link) => {
   link.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
-      scale: 4.5,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
+    gsap.to(cursor, {
+      scale: 3,
+      ease: "power4.out",
     });
   });
 
   link.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
+    gsap.to(cursor, {
       scale: 1,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 1,
-      ease: "power4.inOut",
+      ease: "power4.out",
     });
   });
 });
@@ -108,26 +78,16 @@ homeLink.forEach((link) => {
 const heroSubtitle = document.querySelectorAll("#hero-subtitle p span");
 heroSubtitle.forEach((subtitle) => {
   subtitle.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
-      scale: 6,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
+    gsap.to(cursor, {
+      scale: 4,
+      ease: "power4.out",
     });
   });
 
   subtitle.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
+    gsap.to(cursor, {
       scale: 1,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 1,
-      ease: "power4.inOut",
+      ease: "power4.out",
     });
   });
 });
@@ -135,24 +95,14 @@ heroSubtitle.forEach((subtitle) => {
 const menuSocialLink = document.querySelectorAll("#menu-social-link");
 menuSocialLink.forEach((socialLink) => {
   socialLink.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
-      scale: 5,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
+    gsap.to(cursor, {
+      scale: 3,
+      ease: "power4.out",
     });
   });
 
   socialLink.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
-      scale: 1,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
+    gsap.to(cursor, {
       scale: 1,
       ease: "power4.inOut",
     });
@@ -161,180 +111,155 @@ menuSocialLink.forEach((socialLink) => {
 
 const cta = document.querySelector(".cta-button");
 cta.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 0,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
 cta.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
 const aboutLink = document.querySelector("#about");
 aboutLink.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 6,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+  gsap.to(cursor, {
+    scale: 4,
+    ease: "power4.out",
   });
 });
 
 aboutLink.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
 const liveSite = document.querySelectorAll(".section3 .rolling-text");
 liveSite.forEach((link) => {
   link.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
+    gsap.to(cursor, {
       scale: 0,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
+      ease: "power4.out",
     });
   });
 
   link.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
+    gsap.to(cursor, {
       scale: 1,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 1,
-      ease: "power4.inOut",
+      ease: "power4.out",
     });
   });
 });
 
 const workLink = document.querySelector("#work");
 workLink.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 6,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+  gsap.to(cursor, {
+    scale: 4,
+    ease: "power4.out",
   });
 });
 
 workLink.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
 const services = document.querySelectorAll(".service-box");
 services.forEach((service) => {
   service.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
-      scale: 6,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
+    gsap.to(cursor, {
+      scale: 4,
+      ease: "power4.out",
     });
   });
 
   service.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
+    gsap.to(cursor, {
       scale: 1,
-      ease: "power4.inOut",
+      ease: "power4.out",
     });
-
-    gsap.set(cursor2, {
-      scale: 1,
-      ease: "power4.inOut",
-    });
-  });
-});
-
-const footer = document.querySelector(".collab-box");
-footer.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 2,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
-  });
-});
-
-footer.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
-    scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
   });
 });
 
 const footerEmail = document.querySelector(".footer-email");
 footerEmail.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 2.5,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
+  gsap.to(cursor, {
     scale: 0,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
 footerEmail.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
+  });
+});
+
+const containers = document.querySelectorAll(
+  ".link-container1, .link-container2, .link-container3, .link-container4"
+);
+
+containers.forEach((container) => {
+  const lgImage = container.querySelector(".img-lg");
+  const mdImage = container.querySelector(".img-md");
+  const smImage = container.querySelector(".img-sm");
+
+  // initial position for small image
+  gsap.set(smImage, {
+    xPercent: 25,
   });
 
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+  lgImage.addEventListener("mouseover", () => {
+    // set initial states
+    gsap.set([mdImage, smImage], {
+      display: "block",
+    });
+
+    gsap.to(mdImage, {
+      opacity: 1,
+      duration: 0.2,
+      ease: "power2.out",
+    });
+
+    gsap.to(smImage, {
+      opacity: 1,
+      xPercent: 0,
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  });
+
+  lgImage.addEventListener("mouseleave", () => {
+    gsap.to(mdImage, {
+      opacity: 0,
+      duration: 0.2,
+      ease: "power2.out",
+      onComplete: () => {
+        gsap.set(mdImage, {
+          display: "none",
+        });
+      },
+    });
+
+    gsap.to(smImage, {
+      opacity: 0,
+      xPercent: 25,
+      duration: 0.2,
+      ease: "power2.out",
+      onComplete: () => {
+        gsap.set(smImage, {
+          display: "none",
+        });
+      },
+    });
   });
 });
 
@@ -343,100 +268,61 @@ footerEmail.addEventListener("mouseleave", () => {
 gsap.from(cta, {
   x: 300,
   duration: 2,
-  delay: 6.25,
+  delay: 6.45,
   ease: Expo.easeInOut,
 });
 
 gsap.from(".scroll", {
   opacity: 0,
-  delay: 8.5,
+  delay: 7.45,
   duration: 1,
 });
 
 gsap.to(".scroll ion-icon", {
   rotate: 45,
-  delay: 9.5,
+  delay: 8.95,
 });
 
-gsap.from(".loading-line1", {
-  width: "0%",
-  duration: 2.15,
-  ease: Expo.easeInOut,
+gsap.from(".hero-title-sub span", {
+  clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+  xPercent: -75,
+  rotate: -20,
+  delay: 1.5,
+  duration: 1.75,
+  stagger: {
+    amount: 2,
+    from: "random",
+  },
+  ease: "power2.out",
   onStart: () => {
-    lenis.stop(); // Lock scrolling
+    lenis.stop(); // lock scrolling
   },
 });
 
-gsap.to(".loading-line1", {
-  width: "0%",
-  duration: 2.15,
-  delay: 2.5,
+gsap.to(".hero-title", {
+  bottom: "17%",
+  delay: 5.2,
+  duration: 1.25,
   ease: Expo.easeInOut,
-});
-
-gsap.from(".loading-line2", {
-  width: "0%",
-  duration: 2.15,
-  ease: Expo.easeInOut,
-});
-
-gsap.to(".loading-line2", {
-  width: "0%",
-  duration: 2.15,
-  delay: 2.5,
-  ease: Expo.easeInOut,
-});
-
-gsap.from(".title p span", {
-  y: -100,
-  stagger: 0.05,
-  duration: 1.5,
-  ease: "power3.inOut",
-});
-
-gsap.to(".title p span", {
-  y: 35,
-  stagger: 0.05,
-  duration: 1.5,
-  delay: 4,
-  ease: "power4.inOut",
-});
-
-gsap.set(".title p", {
-  overflow: "visible",
-  delay: 2,
-});
-
-gsap.to(".title p", {
-  scale: 6.15,
-  duration: 2.15,
-  delay: 4,
-  ease: "power4.inOut",
 });
 
 gsap.from("nav .home-link", {
   y: 100,
   duration: 2,
-  delay: 6.25,
+  delay: 6.45,
   ease: Expo.easeInOut,
-});
-
-gsap.set(".title", {
-  mixBlendMode: "difference",
-  color: "#fff",
-  delay: 5,
 });
 
 gsap.from("#hero-subtitle p span", {
   y: 100,
   duration: 2,
-  delay: 6.25,
+  delay: 6.45,
   ease: Expo.easeInOut,
 });
 
 gsap.to(heroImg, {
   clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-  delay: 6.25,
+  delay: 6.45,
   duration: 2,
   ease: Expo.easeInOut,
   onComplete: () => {
@@ -497,13 +383,13 @@ gsap.to("nav .menu-toggle", {
   },
 });
 
-gsap.to(".title p span", {
+gsap.to(".hero-title p span", {
   opacity: 0,
   stagger: 0.1,
   scrollTrigger: {
-    trigger: ".title p",
-    start: "top 25%",
-    end: "bottom 0%",
+    trigger: ".section1",
+    start: "bottom 85%",
+    end: "bottom 35%",
     scrub: 1.5,
   },
 });
@@ -522,16 +408,15 @@ gsap.to(".hero-img img", {
   y: -50,
   clipPath: "polygon(0% 0%, 100% 0%, 100% 85%, 0% 85%)",
   scrollTrigger: {
-    trigger: ".hero-img img",
-    // markers: true,
-    start: "top 5%",
+    trigger: ".section1",
+    start: "top top",
     end: "bottom top",
     scrub: true,
   },
 });
 
 gsap.to(cta, {
-  y: 392,
+  y: 390,
   scrollTrigger: {
     trigger: ".section1",
     start: "top top",
@@ -957,26 +842,16 @@ const menuContainer = document.querySelector(".menu-container");
 const menuBlock = document.querySelectorAll(".menu-block");
 
 menuToggle.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 4.5,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+  gsap.to(cursor, {
+    scale: 3,
+    ease: "power4.out",
   });
 });
 
 menuToggle.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
@@ -1030,26 +905,16 @@ menuToggle.addEventListener("click", () => {
 });
 
 closeToggle.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 4.5,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+  gsap.to(cursor, {
+    scale: 3,
+    ease: "power4.out",
   });
 });
 
 closeToggle.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 

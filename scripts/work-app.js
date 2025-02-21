@@ -16,44 +16,24 @@ window.addEventListener("mousemove", function (dets) {
   gsap.to(cursor, {
     x: dets.clientX,
     y: dets.clientY,
-    duration: 0,
-    ease: Expo.easeInOut,
-  });
-});
-
-const cursor2 = document.querySelector("#cursor2");
-window.addEventListener("mousemove", function (dets) {
-  gsap.to(cursor2, {
-    x: dets.clientX,
-    y: dets.clientY,
-    duration: 0.5,
-    ease: Expo.easeOut,
+    duration: 1,
+    ease: "elastic.out(1,0.2)",
   });
 });
 
 const homeLink = document.querySelectorAll(".home-link");
 homeLink.forEach((link) => {
   link.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
-      scale: 4.5,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
+    gsap.to(cursor, {
+      scale: 3,
+      ease: "power4.out",
     });
   });
 
   link.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
+    gsap.to(cursor, {
       scale: 1,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 1,
-      ease: "power4.inOut",
+      ease: "power4.out",
     });
   });
 });
@@ -61,24 +41,14 @@ homeLink.forEach((link) => {
 const menuSocialLink = document.querySelectorAll("#menu-social-link");
 menuSocialLink.forEach((socialLink) => {
   socialLink.addEventListener("mouseover", () => {
-    gsap.set(cursor, {
-      scale: 5,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
-      scale: 0,
-      ease: "power4.inOut",
+    gsap.to(cursor, {
+      scale: 3,
+      ease: "power4.out",
     });
   });
 
   socialLink.addEventListener("mouseleave", () => {
-    gsap.set(cursor, {
-      scale: 1,
-      ease: "power4.inOut",
-    });
-
-    gsap.set(cursor2, {
+    gsap.to(cursor, {
       scale: 1,
       ease: "power4.inOut",
     });
@@ -87,48 +57,45 @@ menuSocialLink.forEach((socialLink) => {
 
 const cta = document.querySelector(".cta-button");
 cta.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 0,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
 cta.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
+
+//landing page animations
 
 gsap.from(cta, {
   x: 300,
   duration: 2,
-  delay: 1.7,
+  delay: 3.25,
   ease: Expo.easeInOut,
 });
 
 gsap.from(".work-title span", {
-  yPercent: -100,
+  clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+  xPercent: -75,
+  rotate: -20,
   delay: 1,
-  duration: 1.4,
-  stagger: 0.1,
-  ease: Expo.easeOut,
+  duration: 1.75,
+  stagger: {
+    amount: 2,
+    from: "random",
+  },
+  ease: "power2.out",
 });
 
 gsap.from("nav .home-link", {
   y: 100,
   duration: 2,
-  delay: 1.7,
+  delay: 3.25,
   ease: Expo.easeInOut,
 });
 
@@ -145,6 +112,16 @@ gsap.to("nav .nav-links", {
   },
 });
 
+gsap.to("nav .nav-links", {
+  display: "none",
+  scrollTrigger: {
+    trigger: ".work-section1 .work-title",
+    start: "bottom 20%",
+    end: "bottom 20%",
+    scrub: true,
+  },
+});
+
 gsap.to("nav .menu-toggle", {
   y: 0,
   scrollTrigger: {
@@ -155,32 +132,32 @@ gsap.to("nav .menu-toggle", {
   },
 });
 
+gsap.to(".progress-bar", {
+  y: "900%",
+  scrollTrigger: {
+    trigger: ".work-main",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+  },
+});
+
 const menuToggle = document.querySelector(".menu-toggle");
 const closeToggle = document.querySelector(".close-toggle");
 const menuContainer = document.querySelector(".menu-container");
 const menuBlock = document.querySelectorAll(".menu-block");
 
 menuToggle.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 4.5,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+  gsap.to(cursor, {
+    scale: 3,
+    ease: "power4.out",
   });
 });
 
 menuToggle.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
@@ -234,26 +211,16 @@ menuToggle.addEventListener("click", () => {
 });
 
 closeToggle.addEventListener("mouseover", () => {
-  gsap.set(cursor, {
-    scale: 4.5,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 0,
-    ease: "power4.inOut",
+  gsap.to(cursor, {
+    scale: 3,
+    ease: "power4.out",
   });
 });
 
 closeToggle.addEventListener("mouseleave", () => {
-  gsap.set(cursor, {
+  gsap.to(cursor, {
     scale: 1,
-    ease: "power4.inOut",
-  });
-
-  gsap.set(cursor2, {
-    scale: 1,
-    ease: "power4.inOut",
+    ease: "power4.out",
   });
 });
 
